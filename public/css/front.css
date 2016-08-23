@@ -1,0 +1,297 @@
+*{
+	font-family: "Microsoft Yahei";
+	font-size:12px;
+}
+#header{
+	margin-top:10px;
+}
+#logo{
+	height:60px;
+}
+#contact{
+	color:#333;
+}
+#contact i{
+	color:#C81623;
+	margin:0px 5px;
+}
+#contact .glyphicon-envelope{
+	margin-left:40px;
+}
+#shopcart{
+	margin-top:26px;
+	background:#efefef;
+	border:1px solid #ccc;
+	display: block;
+	width:200px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color:#333;
+	text-decoration: none;
+}
+#shopcart i{
+	color:#C81623;
+	margin-right:10px;
+}
+#shopcart span{
+	background:#C81623;
+	color:#fff;
+	display: inline-block;
+	line-height:20px;
+	width:20px;
+	height:20px;
+	text-align: center;
+	border-radius: 10px;
+	margin-left:10px;
+}
+
+#menu #menu_title{
+	background:#C81623;
+	border-radius: 5px 5px 0px 0px; 
+	padding:5px 20px;
+	color:#fff;
+}	
+#menu #menu_title i{
+	margin-right:10px;
+}
+#menu ul{
+	list-style: none;
+	padding-left:0px;
+	background:#DD1F27;
+}
+#menu ul li a{
+	display: block;
+	padding:5px 0px;
+	padding-left:20px;
+	color:#fff;
+	text-decoration: none;
+	border-bottom:1px solid #C81623;
+}
+
+.nivoSlider{
+	height:308px;
+}
+
+.slider-wrapper{
+	position: relative;
+}
+.nivo-controlNav{
+	position: absolute;
+	bottom: 0px;
+	left:50%;
+	width:100px;
+	margin-left:-50px;
+	z-index: 99999;
+}
+.nivo-controlNav .nivo-control{
+	background:#fff;
+	display: inline-block;
+	height:16px;
+	width:16px;
+	line-height: 16px;
+	margin:0px 3px;
+	color:#DD1F27;
+	border-radius: 8px;
+	font-size: 12px;
+}
+.nivo-prevNav,.nivo-nextNav{
+	font-size:24px;
+	color:#fff;
+}
+#hot_sale{
+	border-top:1px solid #ccc;
+}
+#hot_sale .item{
+	width:50%;
+	float:left;
+	padding-right:10px;
+	border:1px solid #ccc;
+	border-top:0px;
+	position: relative;
+}
+#hot_sale .item:nth-child(even){
+	border-left:0px;
+}
+#hot_sale .item img{
+	float:left;
+	margin:10px;
+}
+#hot_sale .item h5{
+	font-weight: bold;
+	color:#333;
+}
+#hot_sale .item p{
+	color:#999;
+}
+#hot_sale .item .price{
+	color:#C81623;
+	font-size:16px;
+	position: absolute;
+	left:170px;
+	bottom:15px;
+}
+#hot_sale .item .buy_now{
+	position: absolute;
+	bottom:10px;
+	right:10px;
+}
+#news{
+	padding-top:10px;
+}
+#news .tab-pane ul{
+	height:121px;
+	border:1px solid #ccc;
+	border-top:0px;
+	list-style: none;
+}
+#news .tab-pane ul a{
+	display: block;
+	text-decoration: none;
+	color:#333;
+	padding:3px 0px;
+}
+
+.floor .main{
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.floor .title{
+	color:#333;
+	font-size:16px;
+}
+.floor .title span{
+	color:#C81623;
+	font-size:18px;
+	font-weight: bold;
+	margin-right:10px;
+}
+.floor .main .first{
+	float:left;
+	width: 50%;
+	padding-right: 10px;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	position: relative;
+}
+.floor .main .first img{
+	float: left;
+	margin:10px;
+}
+.floor .main .first h5{
+	font-weight: bold;
+}
+.floor .main .first p{
+	color:#999;
+}
+.floor .main .first .price{
+	position: absolute;
+	left: 220px;
+	bottom:15px;
+	color:#C81623;
+	font-size:16px;
+}
+.floor .main .first .buy_now{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.floor .item{
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding-top:10px;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	height:222px;
+}
+.floor .item .t{
+	margin-top:10px;
+	font-size: 14px;
+	color:#333;
+}
+.floor .item .price{
+	font-size: 16px;
+	color:#C81623;
+}
+#links ul{
+	width:20%;
+	float:left;
+	list-style: none;
+	padding:0px;
+}
+#links ul li{
+	text-align: center;
+	padding:3px 0px;
+}
+#links ul li a{
+	color:#333;
+	text-decoration: none;
+}
+#copyright{
+	text-align: center;
+	color:#999;
+}
+
+
+#product_detail .product_arg td.l{
+	width:100px;
+	text-align: right;
+	padding-right:15px;
+}
+#product_detail .product_arg td{
+	padding:10px 0px;
+}
+#product_detail .product_arg td.price{
+	color:#C81623;
+	font-size: 16px;
+}
+#product_detail .product_arg td.star{
+	color:orange;
+}
+#product_imgs ul li{
+	list-style: none;
+	border:2px solid #ffffff;
+	float: left;
+}
+#product_imgs ul li.hover{
+	border-color:red;
+}
+#product_imgs ul li img {
+	
+	width:80px;
+}
+
+#product_main_img{
+	height:350px;
+	
+}
+.reduce{
+	display:inline-block;
+	text-align: center;
+	width: 23px;
+	height: 23px;
+	border:1px solid #999;
+	border-right:0px; 
+	float: left;
+	cursor: pointer;
+}
+.inp{
+	width: 60px;
+	float: left;
+	text-align: center;
+	
+}
+.add{
+	display:inline-block;
+	text-align: center;
+  
+	width: 23px;
+	height: 23px;
+	border:1px solid #999;
+	 border-left:0px; 
+	float: left;
+	cursor: pointer;
+
+}
