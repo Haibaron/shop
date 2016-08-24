@@ -46,6 +46,15 @@ class admin_model extends CI_Model {
      public function upcart($user_id,$product_id,$num){
       $this->db->query("update `user_cart` set `num`=`num`+$num where  `user_id` =$user_id and `product_id`=$product_id");
     }
+     public function upcart_num($id,$num){
+      $this->db->where('id',$id)->update('user_cart',array('num'=>$num));
+    }
+    public function get_del_cart($id){
+        $this->db->where('id',$id)->delete('user_cart');
+    }
+    public function get_dels_cart($ids){
+        $this->db->where_in('id',$ids)->delete('user_cart');
+    }
 
   
 

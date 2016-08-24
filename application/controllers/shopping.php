@@ -21,8 +21,33 @@ class shopping extends CI_Controller {
   $user_id=$this->session->userdata("user_id");
   if($this->admin_model->product_in_cart($user_id,$product_id)){
     $this->admin_model->upcart($user_id,$product_id,$num);
+    redirect('');
   }else{
     $this->admin_model->add_to_cart($user_id,$product_id,$num);
   }
  }
+ public function updatecart(){
+  $this->load->model("admin_model");
+  $id=$this->input->get('id');
+  $num=$this->input->get('num');
+  if($if>0){
+     $this->admin_model->upcart_num($id,$num);
+  }
+ 
+    echo "ok";
+}
+ 
+ 
+ public function  del(){
+  $id=$this->input->get('id');
+  $this->load->model("admin_model");
+  $this->admin_model->get_del_cart($id);
+}
+public function  dels(){
+$this->load->model("admin_model");
+  $ids=$this->input->post('ids');
+  
+  $this->admin_model->get_dels_cart($ids);
+  echo "ok";
+}
 }

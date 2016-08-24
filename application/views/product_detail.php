@@ -56,11 +56,11 @@
 							
 
 						</td>
-						<td class="num">
-							<sapn class="reduce">-</sapn>
-							 <input class="inp" type="text" name="num" value="1" />
-							  <span class="add">+</span>
-						</td>
+							<td class="num">
+								<sapn class="reduce">-</sapn>
+								 <input class="inp" type="text" name="num" value="1" />
+								  <span class="add">+</span>
+							</td>
 					</tr>
 					<tr>
 						<td class="l">送货:</td>
