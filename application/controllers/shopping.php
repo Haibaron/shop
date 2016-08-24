@@ -5,8 +5,12 @@ class shopping extends CI_Controller {
 
   
    public function  lst(){
+   $this->load->model("admin_model");
+   $this->load->model('Products_model');
+   $data=$this->admin_model->get_all_cart();
     $data=array(
-      'data'=>$this->input->post()
+      'carts'=>$data,
+    
       );
      $this->load->view("lst",$data);
 }

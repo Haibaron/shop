@@ -11,6 +11,11 @@ class admin_model extends CI_Model {
     	$query = $this->db->where($array)->get('admin');
     	return $query->row();
     }
+     public function get_all_cart(){
+        
+        $query = $this->db->get('user_cart');
+        return $query->result();
+    }
     public function product_in_cart($user_id,$product_id){
         $array=array(
             'user_id' => $user_id,

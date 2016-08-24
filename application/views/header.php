@@ -12,7 +12,7 @@
 			    </div>
 			</div>
 			<div class="col-md-3">
-			   <p>
+			   
 			   <?php if( $this->session->userdata('user_is_login')){  
 			   		 echo  "欢迎回来".$this->session->userdata('user');?>
 			   		  <a href="<?php echo site_url('User/login') ?>">退出</a>
@@ -28,7 +28,7 @@
 
 			   
 			   	 
-			   </p>
+			
 				<a href="" id="shopcart" class="pull-right">
 					<i class="glyphicon glyphicon-shopping-cart"></i>我的购物车<span><?php echo $ci->admin_model->get_count($this->session->userdata('user_id')); ?></span>
 				</a>

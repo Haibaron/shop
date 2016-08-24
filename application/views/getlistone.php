@@ -50,7 +50,7 @@
 				</tr>
 			</table>
 			<br>
-		 <?php foreach ($products1 as $val) {  ?>
+		 <?php foreach ($products1 as $val) {   ?>
 		  	 <a href="<?=current_url()."?brand_id=".$val->id ?>"><?=$val->name ?></a>
 		<?php  } ?>
 		<br>
