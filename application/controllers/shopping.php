@@ -30,8 +30,11 @@ class shopping extends CI_Controller {
   $this->load->model("admin_model");
   $id=$this->input->get('id');
   $num=$this->input->get('num');
-  if($if>0){
+  
+  if($num>0){
      $this->admin_model->upcart_num($id,$num);
+  }else{
+    echo "<0";
   }
  
     echo "ok";
