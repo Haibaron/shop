@@ -27,7 +27,7 @@
 				<i class="glyphicon glyphicon-heart"><a href="">关注商品</a></i>
 			</div>
 			<div class="col-md-6">
-			<form method="post" action="<?php echo  site_url('shopping/lst') ?>">
+			<form method="post" action="<?php echo  site_url('shopping/addtocart') ?>">
 				<h3><?=$product->title?></h3>
 				<input type="hidden" name="product_id" value="<?php echo $product->id ?>">
 				<table class="product_arg">

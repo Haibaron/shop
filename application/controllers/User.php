@@ -31,6 +31,7 @@ class User extends CI_Controller {
         
         if ($admin) {
           $this->session->set_userdata('user',$username);
+          $this->session->set_userdata('user_id',$admin->id);
              return TRUE;
 
         }else{
@@ -44,7 +45,7 @@ class User extends CI_Controller {
    }
    public function  logout(){
       $this->session->sess_destroy();
-      redirect("Front/front")
+      redirect("Front/front");
    }
    public function  vritify(){
       $this->load->view('user_regedit');

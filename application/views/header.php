@@ -15,7 +15,7 @@
 			   <p>
 			   <?php if( $this->session->userdata('user_is_login')){  
 			   		 echo  "欢迎回来".$this->session->userdata('user');?>
-			   		  <a href="<?php echo site_url('User/login') ?>">推出</a>
+			   		  <a href="<?php echo site_url('User/login') ?>">退出</a>
 			   		 <?php  }else{ ?>
                      <a href="<?php echo site_url('User/login') ?>">欢迎登陆</a>
                      <a href="<?php echo site_url('User/regedit') ?>">快速注册</a>
@@ -23,13 +23,14 @@
 			  <?php
 			    
 			} 
+			 $ci=&get_instance(); $ci->load->model('admin_model');
 			   ?>
 
 			   
 			   	 
 			   </p>
 				<a href="" id="shopcart" class="pull-right">
-					<i class="glyphicon glyphicon-shopping-cart"></i>我的购物车<span>3</span>
+					<i class="glyphicon glyphicon-shopping-cart"></i>我的购物车<span><?php echo $ci->admin_model->get_count($this->session->userdata('user_id')); ?></span>
 				</a>
 			</div>
 		</div>
