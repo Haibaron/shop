@@ -53,4 +53,22 @@ $this->load->model("admin_model");
   $this->admin_model->get_dels_cart($ids);
   echo "ok";
 }
+   public function  order1(){
+    $data=$this->input->post("data");
+   $this->session->set_userdata("order1",$data);
+   echo "ok";
 }
+  public function  order(){
+ // var_dump($this->session->userdata("order1"));
+  $this->load->model('Products_model');
+   $this->load->model('User_addr_model');
+  $addr=$this->User_addr_model->get_all_addr($this->session->userdata('user_id'));
+  $data1=array(
+    'data'=>$this->session->userdata("order1"),
+    'addr1'=>$addr
+             );
+  $this->load->view('pay_order',$data1);
+  }
+}
+
+

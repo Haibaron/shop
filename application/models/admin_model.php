@@ -56,6 +56,11 @@ class admin_model extends CI_Model {
         $this->db->where_in('id',$ids)->delete('user_cart');
     }
 
+ public function get_cart_order($data){
+       
+        $query=$this->db->where($data)->get('user_cart');
+        $query->row();
+    }
   
 
 

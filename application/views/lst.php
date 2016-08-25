@@ -14,7 +14,7 @@
 	<?php $this->load->view('header') ?>
 	<br>
 	<div>
-		<?php var_dump($carts) ?>
+
 		<table  class="table">
 
 
@@ -30,6 +30,7 @@
 					
 					<td><input type="checkbox" class="is_select" value="<?=$c->id ?>" >
 					<a href="<?php echo site_url('Product/detail/'.$c->product_id)?>">
+					<input type="hidden" class="product_id" value="<?=$c->product_id?>">
 					<img style="width:60px;" src="<?=base_url($data->img)?>"  />
 					<?=$data->title?>
 					</a>	
@@ -66,13 +67,16 @@
 			 
 			</td>
 		</tr>
-			
+		
 		</table>
+		<button type="submit" class="btn btn-danger pull-right" id="checkout">去结算</button>
+		
 	</div>
 </div>
 </body>
 <script type="text/javascript" src="<?php echo base_url('public/js/jquery.js')?>"></script>
 <script type="text/javascript">
+	
 	$(".table #checkall").click(function(){
 		$("input[type=checkbox]").prop('checked',this.checked);
      
@@ -125,6 +129,27 @@
          			}	
        })
 	})
+	$('#checkout').click(function(){
+		 var data=[];
+       $('.is_select').each(function(i,item){       
+              if($(item).prop('checked')){
+					var element={
+		             		'num':$(item).parents('.cartid').find('.inp').val(),
+		             		'product_id':$(item).parents('.cartid').find('.product_id').val()
+             	                }
+					 data.push(element);     
+                  }
+       });
+       		   
+       		  	  $.post("<?=site_url("shopping/order1")?>",{"data":data},function(data){
+       		  	  	// console.log(data);
+       		  	  	  if(data=='ok'){
+       		  	  	  window.location.href="<?=site_url('shopping/order')?>"}
+       		  	  });
+       		  	  	
+            
+	});
+	 
 
 </script>
 </html>
